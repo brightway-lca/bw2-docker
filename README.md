@@ -4,9 +4,10 @@ Based on the [Jupyter minimal notebook](https://github.com/jupyter/docker-stacks
 
 ## What it Gives You
 
-    * Miniconda, Python 3.8 & brightway2 framework
-    * Unprivileged user jovyan (uid=1000, configurable, see options) in group users (gid=100) with ownership over /home/jovyan and /opt/conda
-    * tini as the container entrypoint and start-notebook.sh as the default command
+* Miniconda
+* Python 3.8
+* Jupyterlab
+* brightway2 framework
 
 Docker instances are ephemeral. You will almost certainly want to mount a [data volume](https://docs.docker.com/storage/volumes/).
 
