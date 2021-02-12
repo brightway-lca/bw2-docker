@@ -16,12 +16,6 @@ To run an instance of Jupyter Lab, accessible at `localhost:10000`:
 
     docker run --rm -p 10000:8888 -e JUPYTER_ENABLE_LAB=yes cmutel:brightway2
 
-To launch into iPython or a bash terminal, use:
-
-    docker run -it --entrypoint ipython cmutel:brightway2
-
-or:
-
-    docker run -it --entrypoint bash cmutel:brightway2
+Jupyterlab also allows you to run iPython sessions or even a terminal.
 
 See the [Jupyter documentation](https://github.com/jupyter/docker-stacks) for more usage options.
