@@ -10,7 +10,7 @@ RUN conda install --quiet --yes wheel && \
 
 # Install Python 3 packages
 
-RUN conda install -y -q -c conda-forge -c cmutel -c haasad brightway2 matplotlib-base jupyter jupyterlab 'xlrd=1.2.0' pandas conda-build
+RUN conda install -y -q -c conda-forge -c cmutel -c haasad brightway2 matplotlib-base jupyter jupyterlab 'xlrd=1.2.0' pandas 'bw2io=0.8.2' conda-build
 RUN conda build purge-all
 RUN fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
