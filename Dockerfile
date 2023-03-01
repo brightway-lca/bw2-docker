@@ -3,8 +3,10 @@ FROM jupyter/minimal-notebook:python-3.10
 # Some stuff from https://github.com/jupyter/docker-stacks/blob/master/scipy-notebook/Dockerfile
 MAINTAINER Chris Mutel <cmutel@gmail.com>
 
+
 USER $NB_USER
 
+RUN conda install -n base --quiet --yes python=3.11
 RUN conda install --quiet --yes wheel && \
     conda update --yes pip wheel setuptools
 
