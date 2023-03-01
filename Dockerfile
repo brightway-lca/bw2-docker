@@ -1,4 +1,4 @@
-FROM jupyter/minimal-notebook
+FROM jupyter/minimal-notebook:python-3.10
 
 # Some stuff from https://github.com/jupyter/docker-stacks/blob/master/scipy-notebook/Dockerfile
 MAINTAINER Chris Mutel <cmutel@gmail.com>
@@ -10,8 +10,9 @@ RUN conda install --quiet --yes wheel && \
 
 # Install Python 3 packages
 
-RUN conda install -y -q -c conda-forge -c cmutel -c haasad brightway2 matplotlib-base jupyter jupyterlab 'xlrd=1.2.0' pandas 'bw2io=0.8.2' conda-build
-RUN conda build purge-all
+ARG REQUIREMENTS_FILE="requirements.txt"
+COPY ${REQUIREMENTS_FILE} /tmp/
+RUN conda install -y -q -c conda-forge --file /tmp/${REQUIREMENTS_FILE} && conda clean --all
 RUN fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
 
