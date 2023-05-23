@@ -13,9 +13,9 @@ Docker instances are ephemeral. You will almost certainly want to mount a [data 
 
 ## Usage
 
-To run an instance of Jupyter Lab, accessible at `localhost:10000`:
+To run an instance of Jupyter Lab, accessible at [localhost:8888](http://localhost:8888/):
 
-    docker run --rm -p 10000:8888 -e JUPYTER_ENABLE_LAB=yes brightway:bw2
+    docker run --rm -p 8888:8888 -e JUPYTER_ENABLE_LAB=yes brightway/bw2
 
 Jupyterlab also allows you to run iPython sessions or even a terminal.
 
