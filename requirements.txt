@@ -1,2 +1,2 @@
-brightway2>=2.4.3
+brightway2>=2.4.7
 pypardiso
