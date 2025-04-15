@@ -5,7 +5,7 @@ Based on the [Jupyter minimal notebook](https://github.com/jupyter/docker-stacks
 ## What it Gives You
 
 * micromamba
-* Python 3.11
+* Python 3.9
 * Jupyterlab
 * brightway2 framework (see the [requirements.txt](requirements.txt) file for the details)
 
