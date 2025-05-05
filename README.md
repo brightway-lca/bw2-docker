@@ -47,7 +47,7 @@ At build time for this image, they correspond to the following:
 The [brightway2](https://github.com/brightway-lca/brightway2) docker images are currently built and
 tagged based on the following different components of the image
 
-+ brightway2 metapackage version (2.4.3)
++ brightway2 metapackage version (2.4.7)
 + python version (py310, py311, py312)
 + the python distribution (official python 3 or micromamba)
 
